@@ -1,28 +1,7 @@
-# -2542. Maximum Subsequence Score / Leetcode 
-class Solution {
- public:
-  // Same as 1383. Maximum Performance of a Team
-  long long maxScore(vector<int>& nums1, vector<int>& nums2, int k) {
-    long long ans = 0;
-    long long sum = 0;
-    // (nums2[i], nums1[i]) sorted by nums2[i] in descending order.
-    vector<pair<int, int>> A;
-    priority_queue<int, vector<int>, greater<>> minHeap;
+Welcome to our Problem of the Day Solutions page, where we provide comprehensive solutions to daily programming challenges from two renowned platforms: GeeksforGeeks and LeetCode. Whether you're a coding enthusiast, a job seeker preparing for technical interviews, or a student looking to enhance your programming skills, our platform has got you covered.
 
-    for (int i = 0; i < nums1.size(); ++i)
-      A.emplace_back(nums2[i], nums1[i]);
+GeeksforGeeks Solutions:
+GeeksforGeeks is a popular platform that offers a vast collection of programming problems and tutorials. Our team diligently solves the Problem of the Day from GeeksforGeeks, providing clear explanations and efficient code implementations. We break down the problem statement, discuss the approach, and present a step-by-step solution. Our solutions are designed to cater to all levels of proficiency, from beginners to advanced programmers.
 
-    sort(begin(A), end(A), greater<>());
-
-    for (const auto& [num2, num1] : A) {
-      minHeap.push(num1);
-      sum += num1;
-      if (minHeap.size() > k)
-        sum -= minHeap.top(), minHeap.pop();
-      if (minHeap.size() == k)
-        ans = max(ans, sum * num2);
-    }
-
-    return ans;
-  }
-};
+LeetCode Solutions:
+LeetCode is widely recognized as an invaluable resource for practicing coding skills and preparing for technical interviews. Our dedicated team also solves the Problem of the Day from LeetCode, ensuring you have access to comprehensive and well-explained solutions. We analyze the problem requirements, propose effective algorithms, and present optimized code solutions. Our goal is to assist you in mastering problem-solving techniques and boosting your confidence.
