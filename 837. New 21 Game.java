@@ -1,5 +1,4 @@
-837. New 21 Game
-Code -
+LeetCode | 837. New 21 Game
   
   class Solution {
   public double new21Game(int n, int k, int maxPts) {
