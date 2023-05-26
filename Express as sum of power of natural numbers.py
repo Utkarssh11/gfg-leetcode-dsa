@@ -1,3 +1,6 @@
+
+GFG-
+
 class Solution:
     def numOfWays(self, n, x):
         # code here
